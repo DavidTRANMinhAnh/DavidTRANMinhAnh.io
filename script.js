@@ -10,6 +10,7 @@ const projects = {
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     skills: ["Réaliser", "Gérer", "Conduire", "Collaborer"],
     techs: ["Java", "SQL", "JavaFX", "Scrum"],
+    images: ["images/Banque/banque1.png", "images/Banque/banque2.png"],
     github: "https://github.com/", group: "En groupe", duration: "4 semaines"
   },
   bonbons: {
@@ -17,6 +18,7 @@ const projects = {
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
     skills: ["Réaliser", "Collaborer", "Conduire"],
     techs: ["HTML", "CSS", "JavaScript"],
+    images: ["images/Bonbons/Bonbon1.png", "images/Bonbons/Bonbon2.png", "images/Bonbons/Bonbon3.png"],
     github: "https://github.com/", group: "En binôme", duration: "3 semaines"
   },
   flopedt: {
@@ -24,6 +26,7 @@ const projects = {
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.",
     skills: ["Réaliser", "Gérer", "Conduire", "Collaborer"],
     techs: ["Python", "Django", "SQL", "Git", "Docker"],
+    images: ["images/flopEDT/flopEDT.png"],
     github: "https://github.com/", group: "En groupe", duration: "6 semaines"
   },
   bomberman: {
@@ -31,6 +34,7 @@ const projects = {
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur adipisci velit.",
     skills: ["Réaliser", "Optimiser", "Collaborer"],
     techs: ["Java", "JavaFX", "Algorithmes"],
+    images: [],
     github: "https://github.com/", group: "En groupe", duration: "5 semaines"
   },
   locura: {
@@ -38,6 +42,7 @@ const projects = {
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.",
     skills: ["Réaliser", "Optimiser", "Collaborer"],
     techs: ["Unity", "C#", "VR SDK", "IoT", "MQTT"],
+    images: ["images/Locura4IOTVR/Locura4IOTVR1.png", "images/Locura4IOTVR/Locura4IOTVR2.png"],
     github: "https://github.com/", group: "En groupe", duration: "8 semaines"
   },
   biblio: {
@@ -45,6 +50,7 @@ const projects = {
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores.",
     skills: ["Réaliser", "Gérer"],
     techs: ["Java", "Oracle", "UML", "Merise"],
+    images: ["images/Biblio/Biblio1.png", "images/Biblio/Biblio2.png", "images/Biblio/Biblio3.png"],
     github: "https://github.com/", group: "Solo", duration: "3 semaines"
   },
   fitness: {
@@ -52,6 +58,7 @@ const projects = {
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit.",
     skills: ["Réaliser", "Gérer", "Conduire"],
     techs: ["Android", "Java", "SQLite", "XML"],
+    images: [],
     github: "https://github.com/", group: "En binôme", duration: "4 semaines"
   },
   serveur: {
@@ -59,6 +66,7 @@ const projects = {
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et expedita distinctio.",
     skills: ["Administrer"],
     techs: ["Linux", "Bash", "Apache", "SSL/TLS", "iptables", "DNS"],
+    images: [],
     github: "https://github.com/", group: "Solo", duration: "2 semaines"
   },
   bd: {
@@ -66,9 +74,23 @@ const projects = {
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt.",
     skills: ["Gérer", "Optimiser"],
     techs: ["Oracle", "SQL", "PL/SQL", "Merise", "UML"],
+    images: ["images/BD/BD1.PNG", "images/BD/BD2.png"],
     github: "https://github.com/", group: "Solo", duration: "3 semaines"
   }
 };
+
+function initializeProjectCardImages() {
+  document.querySelectorAll('.project-img[data-project]').forEach(cardImage => {
+    const key = cardImage.dataset.project;
+    const image = projects[key]?.images?.[0];
+
+    if (!image) return;
+
+    cardImage.style.backgroundImage = `url('${image}')`;
+    cardImage.classList.add('has-image');
+    cardImage.textContent = '';
+  });
+}
 
 /* ── MODALE PROJET ── */
 function openModal(key) {
@@ -77,11 +99,16 @@ function openModal(key) {
 
   document.getElementById('modalTitle').textContent = p.title;
 
-  const photos = [1, 2, 3].map(() => `
-    <div class="modal-photo">
-      <span>${p.emoji}</span>
-      <div class="lorem-badge">📷 À remplacer</div>
-    </div>`).join('');
+  const photos = (p.images && p.images.length > 0)
+    ? p.images.map((src, index) => `
+      <div class="modal-photo has-image">
+        <img src="${src}" alt="Capture ${index + 1} du projet ${p.title}">
+      </div>`).join('')
+    : `
+      <div class="modal-photo">
+        <span>${p.emoji}</span>
+        <div class="lorem-badge">Aucune capture</div>
+      </div>`;
 
   const skillsHtml = p.skills.map(s => `<span class="modal-tag-skill">${s}</span>`).join('');
   const techsHtml  = p.techs.map(t => `<span class="modal-tag-tech">${t}</span>`).join('');
@@ -170,3 +197,5 @@ const tlObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 timelineItems.forEach(item => tlObserver.observe(item));
+
+initializeProjectCardImages();

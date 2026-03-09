@@ -200,6 +200,11 @@ section:first-of-type { padding-top: 160px; }
   font-size: 2.5rem; border-bottom: 1px solid var(--border);
   position: relative; overflow: hidden;
 }
+.project-img.has-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .project-img::after {
   content: ''; position: absolute; inset: 0;
   background: linear-gradient(135deg, rgba(177,162,202,0.05), rgba(139,122,176,0.05));
@@ -405,6 +410,15 @@ footer p { color: var(--muted); font-size: 0.82rem; }
   display: flex; flex-direction: column;
   align-items: center; justify-content: center; gap: 0.4rem;
   font-size: 1.5rem; position: relative; overflow: hidden;
+}
+.modal-photo.has-image {
+  border: 1px solid var(--border);
+}
+.modal-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .lorem-badge {
   position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%);
