@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio – David TRAN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <span class="nav-logo">⟨DT/⟩</span>
+  <ul class="nav-links">
+    <li><a href="#accueil">Accueil</a></li>
+    <li><a href="#competences">Compétences</a></li>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#experience">Expérience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="/cv.pdf" class="nav-cta" download>Télécharger le CV</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="accueil">
+  <div class="hero-content">
+    <p class="hero-greeting fade-in"><span class="dot"></span> Disponible pour alternance / stage</p>
+    <h1 class="hero-name fade-in-2">Bonjour, je suis<br><span>David<br>TRAN</span></h1>
+    <p class="hero-desc fade-in-3">Étudiant en informatique passionné par le développement logiciel, la gestion de données et la conduite de projets agiles.</p>
+    <div class="hero-btns fade-in-4">
+      <a href="#projets" class="btn-primary">Voir mes projets</a>
+      <a href="#contact" class="btn-outline" onclick="event.preventDefault(); document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Me contacter</a>
+    </div>
+  </div>
+  <div class="hero-photo-wrap fade-in-3">
+    <div class="hero-photo">
+      <div class="photo-placeholder">👤</div>
+      <div class="photo-name">David TRAN</div>
+      <div class="photo-role">Développeur · Étudiant BTS/BUT</div>
+      <!-- TODO : à mettre à jour selon le nombre de projets réels
+      <div class="hero-tag"><strong>9</strong> projets réalisés</div>
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- ── COMPÉTENCES ── -->
+<section id="competences">
+  <span class="section-label">04</span>
+  <h2 class="section-title">Compétences</h2>
+  <p class="skills-filter-hint">Cliquez sur une compétence pour filtrer les projets associés.</p>
+  <div class="skills-grid">
+
+    <div class="skill-card active" data-skill="all" onclick="filterProjects('all', this)">
+      <div class="skill-icon">🗂️</div>
+      <div>
+        <div class="skill-title">Tout voir</div>
+        <div class="skill-desc">Afficher tous les projets</div>
+      </div>
+    </div>
+
+    <div class="skill-card" data-skill="realiser" onclick="filterProjects('realiser', this)">
+      <div class="skill-icon">⟨/⟩</div>
+      <div>
+        <div class="skill-title">Réaliser</div>
+        <div class="skill-desc">Développement d'applications complexes (Java, Angular, Python).</div>
+      </div>
+    </div>
+
+    <div class="skill-card" data-skill="optimiser" onclick="filterProjects('optimiser', this)">
+      <div class="skill-icon">⚡</div>
+      <div>
+        <div class="skill-title">Optimiser</div>
+        <div class="skill-desc">Amélioration des performances et algorithmique (Unity/C#, Scripting).</div>
+      </div>
+    </div>
+
+    <div class="skill-card" data-skill="administrer" onclick="filterProjects('administrer', this)">
+      <div class="skill-icon">🖥️</div>
+      <div>
+        <div class="skill-title">Administrer</div>
+        <div class="skill-desc">Installation et maintenance systèmes (Linux, Bash, Réseaux).</div>
+      </div>
+    </div>
+
+    <div class="skill-card" data-skill="gerer" onclick="filterProjects('gerer', this)">
+      <div class="skill-icon">🗄️</div>
+      <div>
+        <div class="skill-title">Gérer</div>
+        <div class="skill-desc">Conception et exploitation de données (SQL, Oracle, UML).</div>
+      </div>
+    </div>
+
+    <div class="skill-card" data-skill="conduire" onclick="filterProjects('conduire', this)">
+      <div class="skill-icon">🔀</div>
+      <div>
+        <div class="skill-title">Conduire</div>
+        <div class="skill-desc">Gestion de projet agile (Scrum, Kanban, Git, Jira).</div>
+      </div>
+    </div>
+
+    <div class="skill-card" data-skill="collaborer" onclick="filterProjects('collaborer', this)">
+      <div class="skill-icon">👥</div>
+      <div>
+        <div class="skill-title">Collaborer</div>
+        <div class="skill-desc">Travail d'équipe et communication (Anglais Pro, Communication).</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── PROJETS ── -->
+<section id="projets">
+  <div class="projects-header">
+    <div>
+      <span class="section-label">05</span>
+      <h2 class="section-title">Projets</h2>
+    </div>
+    <a href="https://github.com/votre-pseudo" target="_blank" class="btn-outline" style="white-space:nowrap">GitHub →</a>
+  </div>
+  <div class="projects-grid" id="projectsGrid">
+
+    <div class="project-card" data-skills="realiser gerer conduire collaborer">
+      <div class="project-img">🏦</div>
+      <div class="project-body">
+        <div class="project-tags"><span class="tag">Java</span><span class="tag">SQL</span><span class="tag">Scrum</span></div>
+        <div class="project-title">Application bancaire</div>
+        <div class="project-desc">Application de gestion de comptes bancaires avec opérations de virement, consultation et administration.</div>
+        <div class="project-links">
+          <a href="https://github.com/" class="project-link github">GitHub</a>
+          <button class="btn-details" onclick="openModal('bancaire')">Détails</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-skills="realiser collaborer conduire">
+      <div class="project-img">🍬</div>
+      <div class="project-body">
+        <div class="project-tags"><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span></div>
+        <div class="project-title">Site d'achat de bonbons</div>
+        <div class="project-desc">Site e-commerce pour la vente de confiseries avec panier, catalogue et interface utilisateur soignée.</div>
+        <div class="project-links">
+          <a href="https://github.com/" class="project-link github">GitHub</a>
+          <button class="btn-details" onclick="openModal('bonbons')">Détails</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-skills="realiser gerer conduire collaborer">
+      <div class="project-img">📅</div>
+      <div class="project-body">
+        <div class="project-tags"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">SQL</span></div>
+        <div class="project-title">flopEDT</div>
+        <div class="project-desc">Contribution à un outil open-source de génération automatique d'emplois du temps pour les universités.</div>
+        <div class="project-links">
+          <a href="https://github.com/" class="project-link github">GitHub</a>
+          <button class="btn-details" onclick="openModal('flopedt')">Détails</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-skills="realiser optimiser collaborer">
+      <div class="project-img">💣</div>
+      <div class="project-body">
+        <div class="project-tags"><span class="tag">Java</span><span class="tag">JavaFX</span></div>
+        <div class="project-title">Bomber Man</div>
+        <div class="project-desc">Recréation du jeu Bomberman en Java avec gestion des collisions, IA des ennemis et niveaux progressifs.</div>
+        <div class="project-links">
+          <a href="https://github.com/" class="project-link github">GitHub</a>
+          <button class="btn-details" onclick="openModal('bomberman')">Détails</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-skills="realiser optimiser collaborer">
+      <div class="project-img">🥽</div>
+      <div class="project-body">
+        <div class="project-tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">VR</span></div>
+        <div class="project-title">Locura4IOT VR</div>
+        <div class="project-desc">Application de réalité virtuelle pour la visualisation et l'interaction avec des objets connectés IoT.</div>
+        <div class="project-links">
+          <a href="https://github.com/" class="project-link github">GitHub</a>
+          <button class="btn-details" onclick="openModal('locura')">Détails</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-skills="realiser gerer">
+      <div class="project-img">📚</div>
+      <div class="project-body">
+        <div class="project-tags"><span class="tag">Java</span><span class="tag">Oracle</span><span class="tag">UML</span></div>
+        <div class="project-title">Gestion de bibliothèque</div>
+        <div class="project-desc">Application de gestion d'une bibliothèque : emprunts, retours, adhérents et catalogue d'ouvrages.</div>
+        <div class="project-links">
+          <a href="https://github.com/" class="project-link github">GitHub</a>
+          <button class="btn-details" onclick="openModal('biblio')">Détails</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-skills="realiser gerer conduire">
+      <div class="project-img">🏋️</div>
+      <div class="project-body">
+        <div class="project-tags"><span class="tag">Android</span><span class="tag">Java</span><span class="tag">SQLite</span></div>
+        <div class="project-title">Application fitness</div>
+        <div class="project-desc">Application mobile Android de suivi d'entraînements, avec programmes personnalisés et historique.</div>
+        <div class="project-links">
+          <a href="https://github.com/" class="project-link github">GitHub</a>
+          <button class="btn-details" onclick="openModal('fitness')">Détails</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-skills="administrer">
+      <div class="project-img">🐧</div>
+      <div class="project-body">
+        <div class="project-tags"><span class="tag">Linux</span><span class="tag">Bash</span><span class="tag">Apache</span><span class="tag">SSL</span></div>
+        <div class="project-title">Déploiement serveur &amp; hébergement web sécurisé</div>
+        <div class="project-desc">Configuration complète d'un serveur Debian : Apache, HTTPS, pare-feu, DNS et scripts d'automatisation.</div>
+        <div class="project-links">
+          <a href="https://github.com/" class="project-link github">GitHub</a>
+          <button class="btn-details" onclick="openModal('serveur')">Détails</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-skills="gerer optimiser">
+      <div class="project-img">🗃️</div>
+      <div class="project-body">
+        <div class="project-tags"><span class="tag">Oracle</span><span class="tag">SQL</span><span class="tag">Merise</span></div>
+        <div class="project-title">Conception d'une base de données</div>
+        <div class="project-desc">Modélisation MCD/MLD et implémentation d'une base de données relationnelle avec procédures stockées.</div>
+        <div class="project-links">
+          <a href="https://github.com/" class="project-link github">GitHub</a>
+          <button class="btn-details" onclick="openModal('bd')">Détails</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── EXPÉRIENCE PROFESSIONNELLE ── -->
+<section id="experience">
+  <span class="section-label">06</span>
+  <h2 class="section-title">Expérience professionnelle</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-date">Mars 2026 – En cours</div>
+      <div class="timeline-card">
+        <div class="timeline-title">Stage en entreprise</div>
+        <div class="timeline-company">🏢 Entreprise à renseigner</div>
+        <div class="timeline-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Participez à des missions de développement, d'intégration ou d'administration système au sein d'une équipe professionnelle.</div>
+        <span class="timeline-badge">⏳ En cours</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">Mars 2025 – Mai 2025 · 10 semaines</div>
+      <div class="timeline-card">
+        <div class="timeline-title">Stage en entreprise</div>
+        <div class="timeline-company">🏢 Entreprise à renseigner</div>
+        <div class="timeline-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Stage de 10 semaines au cours duquel j'ai mis en pratique mes compétences en développement, contribué à des projets réels et m'intégré dans un environnement professionnel.</div>
+        <span class="timeline-badge">✅ 10 semaines</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <span class="section-label">07</span>
+      <h2 class="section-title">Me contacter</h2>
+      <p>Vous avez un projet, une alternance ou simplement envie d'échanger ? N'hésitez pas à m'écrire !</p>
+
+      <div class="contact-row">
+        <div class="contact-row-icon">📧</div>
+        <div>
+          <div class="contact-row-label">Email</div>
+          <div class="contact-row-value">votre@email.com</div>
+        </div>
+      </div>
+
+      <a href="https://github.com/votre-pseudo" target="_blank" class="github-btn">
+        <span class="github-btn-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </span>
+        <span class="github-btn-text">Voir mon GitHub</span>
+        <span class="github-btn-arrow">→</span>
+      </a>
+
+      <div class="contact-row">
+        <div class="contact-row-icon">📄</div>
+        <div>
+          <div class="contact-row-label">CV</div>
+          <div class="contact-row-value"><a href="/cv.pdf" style="color:var(--accent)">Télécharger mon CV</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="contact-form">
+        <div class="form-group">
+          <label>Votre nom</label>
+          <input type="text" placeholder="Jean Dupont" />
+        </div>
+        <div class="form-group">
+          <label>Adresse email</label>
+          <input type="email" placeholder="jean@exemple.fr" />
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Bonjour, je souhaitais vous contacter au sujet de…"></textarea>
+        </div>
+        <button class="form-submit" onclick="sendForm()">Envoyer le message →</button>
+        <p class="form-note">Je vous répondrai dans les 48h.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>© 2026 David TRAN — Portfolio personnel</p>
+  <div class="footer-links">
+    <a href="#accueil">Accueil</a>
+    <a href="#competences">Compétences</a>
+    <a href="#projets">Projets</a>
+    <a href="#experience">Expérience</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<!-- ── MODAL ── -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="modalTitle"></div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
