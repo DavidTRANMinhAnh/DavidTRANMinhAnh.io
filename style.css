@@ -335,7 +335,7 @@ section:first-of-type { padding-top: 160px; }
 }
 
 /* ── CONTACT ── */
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 .contact-info p { color: var(--muted); max-width: 380px; margin-bottom: 2rem; }
 .contact-row {
   display: flex; align-items: center; gap: 1rem;
