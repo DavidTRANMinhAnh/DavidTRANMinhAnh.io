@@ -336,6 +336,16 @@ section:first-of-type { padding-top: 160px; }
 
 /* ── CONTACT ── */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.contact-grid > div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.contact-form {
+  width: 100%;
+}
 .contact-info p { color: var(--muted); max-width: 380px; margin-bottom: 2rem; }
 .contact-row {
   display: flex; align-items: center; gap: 1rem;
