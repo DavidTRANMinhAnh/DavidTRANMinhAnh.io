@@ -7,7 +7,7 @@
 const projects = {
   bancaire: {
     title: "Application bancaire", emoji: "🏦",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    desc: "Application réaliser en première année de BUT. Mise en application des notions vu en cours (développement Orienté Objet). ",
     skills: ["Réaliser", "Gérer", "Conduire", "Collaborer"],
     techs: ["Java", "SQL", "JavaFX", "Scrum"],
     images: ["images/Banque/banque1.png", "images/Banque/banque2.png"],
@@ -15,15 +15,15 @@ const projects = {
   },
   bonbons: {
     title: "Site d'achat de bonbons", emoji: "🍬",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    desc: "Site réaliser durant la deuxième année de BUT. Consistant à réaliser un site vitrine de vente de bonbon pour un client. En plus de la réalisation du site. Le développement d'une gestion des flux de données du hangar (capteur d'humidité, température etc).",
     skills: ["Réaliser", "Collaborer", "Conduire"],
-    techs: ["HTML", "CSS", "JavaScript"],
+    techs: ["HTML", "CSS", "JavaScript, Python"],
     images: ["images/Bonbons/Bonbon1.png", "images/Bonbons/Bonbon2.png", "images/Bonbons/Bonbon3.png"],
     github: "https://github.com/", group: "En binôme", duration: "3 semaines"
   },
   flopedt: {
     title: "flopEDT", emoji: "📅",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.",
+    desc: "Création de la page qui servira aux professeurs pour définir leurs disponibilités durant les semaines type et atypique.",
     skills: ["Réaliser", "Gérer", "Conduire", "Collaborer"],
     techs: ["Python", "Django", "SQL", "Git", "Docker"],
     images: ["images/flopEDT/flopEDT.png"],
@@ -31,7 +31,7 @@ const projects = {
   },
   bomberman: {
     title: "Bomber Man", emoji: "💣",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur adipisci velit.",
+    desc: "Création d'un Bomberman créé sur le moteur Godot Engine, avec un mode multijoueur et diverses cartes.",
     skills: ["Réaliser", "Optimiser", "Collaborer"],
     techs: ["Java", "JavaFX", "Algorithmes"],
     images: [],
@@ -39,7 +39,7 @@ const projects = {
   },
   locura: {
     title: "Locura4IOT VR", emoji: "🥽",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.",
+    desc: "Visualisation immersive de données capteurs en temps réel.",
     skills: ["Réaliser", "Optimiser", "Collaborer"],
     techs: ["Unity", "C#", "VR SDK", "IoT", "MQTT"],
     images: ["images/Locura4IOTVR/Locura4IOTVR1.png", "images/Locura4IOTVR/Locura4IOTVR2.png"],
@@ -47,7 +47,7 @@ const projects = {
   },
   biblio: {
     title: "Application de gestion de bibliothèque", emoji: "📚",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores.",
+    desc: "Architecture n-tiers complète : Back-office et Front-office.",
     skills: ["Réaliser", "Gérer"],
     techs: ["Java", "Oracle", "UML", "Merise"],
     images: ["images/Biblio/Biblio1.png", "images/Biblio/Biblio2.png", "images/Biblio/Biblio3.png"],
@@ -55,7 +55,7 @@ const projects = {
   },
   fitness: {
     title: "Application fitness", emoji: "🏋️",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit.",
+    desc: "Application permettant le suivi de sa routine sportive. Possibilité de réaliser son programme.",
     skills: ["Réaliser", "Gérer", "Conduire"],
     techs: ["Android", "Java", "SQLite", "XML"],
     images: [],
@@ -63,7 +63,7 @@ const projects = {
   },
   serveur: {
     title: "Déploiement serveur & hébergement web sécurisé", emoji: "🐧",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et expedita distinctio.",
+    desc: "Déploiment serveur et hébérgement web sécurisé.",
     skills: ["Administrer"],
     techs: ["Linux", "Bash", "Apache", "SSL/TLS", "iptables", "DNS"],
     images: [],
@@ -71,7 +71,7 @@ const projects = {
   },
   bd: {
     title: "Conception d'une base de données", emoji: "🗃️",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt.",
+    desc: "Mise en application des base de la créations d'une base de données. ",
     skills: ["Gérer", "Optimiser"],
     techs: ["Oracle", "SQL", "PL/SQL", "Merise", "UML"],
     images: ["images/BD/BD1.PNG", "images/BD/BD2.png"],

@@ -266,6 +266,22 @@ section:first-of-type { padding-top: 160px; }
 .btn-details:hover { background: rgba(177,162,202,0.28); border-color: var(--accent); }
 .project-card.hidden { display: none; }
 
+/* ── ÉTUDES ── */
+#etudes { background: var(--bg); }
+
+.timeline-badge--current {
+  background: rgba(177,162,202,0.15);
+  border: 1px solid rgba(177,162,202,0.4);
+  color: var(--accent);
+}
+
+.timeline-badge--done {
+  background: rgba(100,200,140,0.1);
+  border: 1px solid rgba(100,200,140,0.3);
+  color: #7ecfa0;
+}
+
+
 /* ── EXPÉRIENCE ── */
 #experience { background: var(--surface); }
 .timeline { position: relative; padding-left: 2rem; margin-top: 2rem; }
